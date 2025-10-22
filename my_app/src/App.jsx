@@ -29,6 +29,25 @@ import Product from './propsComponents/props03'
 import Counter01 from './propsComponents/stateCount'
 import Counter02 from './propsComponents/stateCount02'
 import Alert from './propsComponents/props06'
+import Exstate01 from './stateComponents/Ex01'
+import Exstate02 from './stateComponents/Ex02'
+import Exstate03 from './stateComponents/Ex03'
+import Exstate04 from './stateComponents/Ex04'
+import Exstate05 from './stateComponents/Ex05'
+import Exstate06 from './stateComponents/Ex06'
+import Exstate07 from './stateComponents/Ex07'
+import Exstate08 from './stateComponents/Ex08'
+import Exstate09 from './stateComponents/Ex09'
+import Exstate10 from './stateComponents/Ex10'
+import Exstate11 from './stateComponents/Ex11'
+import Exstate13 from './stateComponents/Ex13'
+import Exstate14 from './stateComponents/Ex14'
+import Exstate15 from './stateComponents/Ex15'
+import Exstate16 from './stateComponents/Ex16'
+import Exstate17 from './stateComponents/Ex17'
+import Exstate18 from './stateComponents/Ex18'
+import Test from './stateComponents/test'
+import Blog from './stateComponents/Blog'
 /* UserCard() 함수 생성 하기 */
 /* UserCard() 컴포넌트를 App()컴포넌트의 자식으로 사용할 예정 */
 /* 컴포넌트와 컴포넌트 사이의 데이터 이동이 가능하다. */
@@ -111,10 +130,14 @@ function App() {
       <Product name='노트북' price={120000}/>
       <Product name='마우스' price={15000}/> */}
       {/* <Counter02 /> */}
-      <Alert type='error' msg='오류'/>
-      <Alert type='sucess' msg='성공'/>
+      {/* <Alert type='error' msg='오류'/>
+      <Alert type='success' msg='성공'/>
       <Alert type='info' msg='정보'/>
-      <Alert type='warring' msg='경고'/>
+      <Alert type='warring' msg='경고'/> */}
+      
+      <Blog />
+      
+
     </>
   )
 }
