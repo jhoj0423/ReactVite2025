@@ -1,0 +1,40 @@
+#root .myReview{
+    border: 1px solid black;
+    margin: 0 auto;
+    width: 500px;
+    border-radius: 10px;
+    
+}
+#root .myReview .ReviewList{
+    list-style: none;
+    margin: 0 auto;
+    padding: 10px;
+}
+#root .myReview .ReviewList li{
+    background-color: #ccc;
+    border-radius: 10px;
+    border: 1px solid gray;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px;
+
+}
+#root .myReview .ReviewList li button{
+    width: 100px;
+    margin-bottom: 10px;
+}
+#addBtn{
+    background-color: yellowgreen;
+    font-weight: bold;
+}
+.Review input{
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.delBtn{
+    background-color: yellowgreen;
+}

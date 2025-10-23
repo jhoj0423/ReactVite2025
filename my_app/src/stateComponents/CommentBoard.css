@@ -1,0 +1,37 @@
+.borde{
+    background-color: #eee;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px 40px;
+    width: 400px;
+}
+.borde > input{
+    padding: 10px;
+    border:3px solid #333;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.borde > button{
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+.borde .bordeList{
+    display: flex;
+    justify-content: right;
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin: 10px;
+    flex-wrap: wrap;
+    padding: 5px;
+    background-color: #fff;
+}
+.borde .bordeList p{
+    display: block;
+    width: 400px;
+}
+.borde .bordeList button{
+    margin-left: 10px;
+    background-color: #333;
+    color: #fff;
+}

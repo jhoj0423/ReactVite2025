@@ -1,0 +1,43 @@
+.myShopping{
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.itemList{
+    list-style: none;
+    padding: 0;
+
+}
+.addList input{
+    padding: 12px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.addList button{
+    background-color: yellowgreen;
+    font-weight: bold;
+}
+.itemList li{
+    background-color: #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: right;
+    position: relative;
+    font-weight: 600;
+
+}
+.itemList li button{
+    margin-left: 10px;
+    background-color: #333;
+    color: #fff;
+    
+}
+.itemList li span{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    
+}

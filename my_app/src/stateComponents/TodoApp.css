@@ -1,0 +1,13 @@
+.todoBorde{
+    background-color: #eee;
+    padding: 20px 40px;
+    border-radius: 5px;
+}
+.todoBorde .TodoBtn{
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    background-color: yellowgreen;
+    font-weight: bold;
+    padding: 0;
+}

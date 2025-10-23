@@ -1,0 +1,36 @@
+.studentScoreList{
+    background-color: #ccc;
+    padding: 20px 40px;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+.studentScoreList .students{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.studentScoreList .students button{
+    background-color: tomato;
+    color: black;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.studentScoreList .students .good{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: gold;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    line-height: 30px;
+
+}
+.studentScoreList .students > p{
+    font-weight: bold;
+    color: #760404;
+    
+}
