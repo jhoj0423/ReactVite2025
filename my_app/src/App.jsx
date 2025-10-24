@@ -53,6 +53,13 @@ import ShoppingList from './stateComponents/ShoppingList'
 import CommentBoard from './stateComponents/CommentBoard'
 import ScoreManager from './stateComponents/student'
 import TodoApp from './stateComponents/TodoApp'
+import ModalChange from './StateUI/uiTest'
+import LoginView from './StateUI/UiTest02'
+import PromptChange from './StateUI/UiTest03'
+import UiParent04 from './StateUI/UiTest04'
+import AuthApp from './StateUI/member/AuthApp'
+import MovieApp from './StateUI/movie/MovieApp'
+import ShopApp from './StateUI/shop/shopApp'
 /* UserCard() 함수 생성 하기 */
 /* UserCard() 컴포넌트를 App()컴포넌트의 자식으로 사용할 예정 */
 /* 컴포넌트와 컴포넌트 사이의 데이터 이동이 가능하다. */
@@ -140,7 +147,7 @@ function App() {
       <Alert type='info' msg='정보'/>
       <Alert type='warring' msg='경고'/> */}
       
-      <TodoApp />
+      <ShopApp />
       
 
     </>

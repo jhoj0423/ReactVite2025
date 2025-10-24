@@ -18,14 +18,18 @@ export default function TodoApp(){
 }
 
 function TodaItem(props){
-    <OnToggle ToggleBtn={ToggleBtn} todolinst={props.todolinst}/>
+    const ToggleBtn = () =>{
+
+    }
     return(
         <>
             <div>
                 {props.todolinst.map((item,index)=>(
                     <button key={index} className="TodoBtn" onClick={ToggleBtn}><p>{item.text}</p></button>
+                    
                 ))}
             </div>
+            <OnToggle ToggleBtn={()=>ToggleBtn(index)}/>
         </>
     )
 }
@@ -35,7 +39,5 @@ function TodaItem(props){
 } */
 
 function OnToggle(props){
-    props.ToggleBtn = () =>{
-
-    }
+    
 }

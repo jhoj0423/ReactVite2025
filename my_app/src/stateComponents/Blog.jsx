@@ -2,11 +2,12 @@ import React,{useState} from "react";
 
 export default function Blog(){
     const [posts,setPosts] = useState(['남자 코트 추천','강남 우동맛집','파이썬독학'])
-    const [likes,setLikes] = useState([0,0,0])
-    const [inputValue,setInputValue] = useState('')
-    
-    /* const [modalOpen,setModalOpen] = useState(false)
-    const [selected,setSelected] = useState(0) */
+    const [likes,setLikes] = useState([0,0,0]);
+    const [inputValue,setInputValue] = useState('');
+    /* 모달 창이 안보이는 상태를 false 지정 */
+    const [modalOpen,setModalOpen] = useState(false);
+    /* 선택한 글의 인덱스 지정 */
+    const [selected,setSelected] = useState(null);
     
     /* 실행 로직 시작--------------------------------------------------------- */
     
@@ -69,7 +70,7 @@ export default function Blog(){
             <ul style={{listStyle:'none'}}>
                 {...posts.map((item,index)=>(
                     <li key={index} style={{marginBottom:'10px',border:'2px solid #0123ab68'}}>
-                        <span style={{
+                        <span onClick={()=>{setModalOpen(!modalOpen); setSelected(index);}} style={{
                             fontWeight:'bold',
                             color:'#0123ab68',
                             fontSize:'20px'
@@ -82,7 +83,8 @@ export default function Blog(){
                     </li>
                 ))}
             </ul>
-            <BlogChild Writing={Writing} inputValue={inputValue} setInputValue={setInputValue} output={output}/>
+            <BlogChild Writing={Writing} inputValue={inputValue} setInputValue={setInputValue} output={output} modalOpen={modalOpen}
+            title={posts} setTitle={setPosts} selected={selected} setModalOpen={setModalOpen}/>
         </>
     )
 }
@@ -94,6 +96,36 @@ function BlogChild(props){
         <>
             <input type="text" onChange={props.output} value={props.inputValue} placeholder="글 제목 입력"/>
             <button onClick={props.Writing}>글발행</button>
+            {props.modalOpen && <Modal color={'lightblue'} title={props.title} setTitle={props.setTitle} index={props.selected}
+            onClose={()=>props.setModalOpen(false)}/>}
+        </>
+    )
+}
+
+function Modal(props){
+    /* 업데이트 함수 필요 */
+    /*  얕은 복사 필요 */
+    /* 1. props.title를 얕은 복사  let titleCopy =[...props.title]*/
+    /* 2. prompt("새 제목을 입력하세요",~~~) */
+    /* titleCopy[props.index] = prompt("새 제목을 입력하세요",titleCopy[props.index]) */
+    /* 3. titleCopy[props.index] => titleCopy[0] => 남자 코트 추천*/
+    /* 4. 수정 한 글제목을 업데이트 해야함 props.setPosts(titleCopy) */
+    const reWirght =()=>{
+        let titleCopy = [...props.title]
+        titleCopy[props.index] = prompt("새 제목을 입력하세요",titleCopy[props.index]) || titleCopy[props.index]
+        /* ||  => Or */
+        props.setTitle(titleCopy)
+    }
+    return(
+
+        <>
+            <div className="BlogModal" style={{backgroundColor:props.color}}>
+                <h4>{props.title[props.index]}</h4>
+                <p>날짜 : 11월 1일</p>
+                <p>상세내용 : 여기에 내용을 넣어 보세요</p>
+                <button onClick={reWirght}>글수정</button>
+                <button onClick={props.onClose}>닫기</button>
+            </div>
         </>
     )
 }
