@@ -23,3 +23,12 @@
     font-weight: bold;
     font-size: 25px;
 }
+.modalBack{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+}

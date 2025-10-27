@@ -1,5 +1,18 @@
+import ProductItem from "./productItem"
+
 export default function ProductList(props){
-    const addItem =(index) =>{
+    return(
+        <>
+            <ul className="itemList">
+                {props.products.map((products)=>(
+                    <ProductItem key={products.id} products={products} addItem={props.addItem}/>
+                ))}
+            </ul>
+        </>
+    )
+}
+
+/* const addItem =(index) =>{
         let numCopy = [...props.num]
         numCopy[index] += 1
         props.setNum(numCopy)
@@ -15,5 +28,4 @@ export default function ProductList(props){
                 ))}
             </ul>
         </>
-    )
-}
+    ) */

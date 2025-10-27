@@ -60,6 +60,9 @@ import UiParent04 from './StateUI/UiTest04'
 import AuthApp from './StateUI/member/AuthApp'
 import MovieApp from './StateUI/movie/MovieApp'
 import ShopApp from './StateUI/shop/shopApp'
+import BlogC from './stateComponents/Blog/blogc'
+import NewMovieApp from './StateUI/NewMovie/MovieApp'
+import FoodApp from './StateUI/food/foodApp'
 /* UserCard() 함수 생성 하기 */
 /* UserCard() 컴포넌트를 App()컴포넌트의 자식으로 사용할 예정 */
 /* 컴포넌트와 컴포넌트 사이의 데이터 이동이 가능하다. */
@@ -147,7 +150,7 @@ function App() {
       <Alert type='info' msg='정보'/>
       <Alert type='warring' msg='경고'/> */}
       
-      <ShopApp />
+      <FoodApp />
       
 
     </>
