@@ -8,7 +8,7 @@ export default function MenuList(props){
                     <li key={ChkList.id}>
                         <span><img src={`/menuimgs/${ChkList.title}`} alt={ChkList.name} /></span>
                         <h4>{ChkList.name}</h4>
-                        <strong>{ChkList.price}</strong>
+                        <strong>{ChkList.price}원</strong>
                         <button type="button" onClick={()=>props.addMenu(ChkList)}>담기</button>
                     </li>
                 ))}

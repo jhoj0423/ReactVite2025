@@ -1,24 +1,157 @@
+.PizzaTable{
+    width: 843px;
+    height: 525px;
+    margin: 0 auto;
+    padding: 0;
+    border: 3px solid #bb4d50;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #383d3d;
+
+}
+.PizzaTable h2{
+    background-color: #ef646a;
+    margin: 0;
+    text-align: left;
+    padding-left: 20px;
+    height: 40px;
+}
+.menuBtns{
+    background-color: #313538;
+    width: 180px;
+    height: 480px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    padding-top: 30px;
+    padding-right: 10px;
+    text-align: right;
+    border-right: 5px solid #111;
+    box-sizing: border-box;
+}
+.menuBtns button{
+    margin-bottom: 10px;
+    width: 130px;
+    padding: 5px 10px 5px 0;
+    text-align: right;
+    border-bottom: 3px solid #222;
+    background-color: transparent;
+    border-radius: 0;
+    color: #ccc;
+}
+.menuBtns button:hover{
+    border: none;
+    border-bottom: 3px solid #ccc;
+}
+
+
 .MenuList{
+    position: absolute;
+    top: 40px;
+    right: 0;
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 800px;
+    width: 600px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    border-radius: 3px solid blue;
 }
 .MenuList > li{
     border: 3px solid salmon;
-    margin: 10px;
-    
+    margin: 5px;
+    background-color: #383d3d;
+    color: #fff;
+    border-radius: 5px;
 }
 .MenuList > li >span{
     display: inline-block;
-    width: 150px;
-    height: 120px;
-    
+    width: 130px;
+    height: 80px;
 }
 .MenuList > li >span >img{
     width: 100%;
     height: 100%;
+}
+.MenuList > li > h4{
+    margin: 0;
+    padding: 0;
+}
+.MenuList > li > strong{}
+.MenuList > li > button{
+    background-color: #313538;
+    padding: 5px 10px;
+    color: #fff;
+    border: 1px solid #111;
+    margin-bottom: 3px;
+}
+.orderlist{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 479px;
+    background-color: #383d3d;
+    border-left: 5px solid #000;
+    margin-top: 40px;
+    
+}
+.orderlist h2{
+    text-align: right;
+    padding: 0px 20px;
+    background-color: #222;
+    color: #fff;
+}
+.orderlist ul{
+    list-style: none;
+    color: #fff;
+    padding: 0 10px;
+}
+.orderlist ul > li{
+    border: 1px solid #999;
+    position: relative;
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.orderlist ul > li >p{
+    padding: 0;
+    margin: 0;
+}
+.orderlist ul > li >span{
+    font-size: 11px;
+}
+.orderlist ul li .buttons{
+    position: absolute;
+    top: 40%;
+    right: 5px;
+    height: 30px;
+}
+.orderlist ul li .buttons button{
+    padding: 8px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #313538;
+    border: 2px solid #111;
+    line-height: 0.3;
+    transition: 0.2s;
+    
+
+}
+.orderlist ul li .buttons button:hover{
+    background-color: #fff;
+    color: #313538;
+}
+.orderlist ul li .buttons >strong{
+    display: inline-block;
+    padding: 0 5px;
+    height: 100%;
+    line-height: 0.3;
+}
+.pay{
+    color: #fff;
 }
