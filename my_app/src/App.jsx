@@ -63,6 +63,15 @@ import ShopApp from './StateUI/shop/shopApp'
 import BlogC from './stateComponents/Blog/blogc'
 import NewMovieApp from './StateUI/NewMovie/MovieApp'
 import FoodApp from './StateUI/food/foodApp'
+import Hover01 from './StateUI/shop/hover01'
+import Hover02 from './StateUI/shop/hover02'
+import Hover03 from './StateUI/shop/hover03'
+import Hover04 from './StateUI/shop/hover04'
+import Changimg01 from './StateUI/Changimg01'
+import Changimg02 from './StateUI/Changimg02'
+import Changimg03 from './StateUI/Changimg03'
+import Changimg04 from './StateUI/Changimg04'
+import PizzaApp from './StateUI/Pizza/PizzaApp'
 /* UserCard() 함수 생성 하기 */
 /* UserCard() 컴포넌트를 App()컴포넌트의 자식으로 사용할 예정 */
 /* 컴포넌트와 컴포넌트 사이의 데이터 이동이 가능하다. */
@@ -150,7 +159,7 @@ function App() {
       <Alert type='info' msg='정보'/>
       <Alert type='warring' msg='경고'/> */}
       
-      <FoodApp />
+      <PizzaApp />
       
 
     </>
