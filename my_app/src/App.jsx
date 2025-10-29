@@ -71,7 +71,14 @@ import Changimg01 from './StateUI/Changimg01'
 import Changimg02 from './StateUI/Changimg02'
 import Changimg03 from './StateUI/Changimg03'
 import Changimg04 from './StateUI/Changimg04'
-import PizzaApp from './StateUI/Pizza/PizzaApp'
+import PizzaApp from './StateUI/TableOrder/PizzaApp'
+import Effect01 from './StateUI/Effect/Eff01'
+import Effect02 from './StateUI/Effect/Eff02'
+import Effect03 from './StateUI/Effect/Eff03'
+import Effect05 from './StateUI/Effect/Eff05'
+import Effect06 from './StateUI/Effect/Eff06'
+import Effect08 from './StateUI/Effect/Eff08'
+import Effect09 from './StateUI/Effect/Eff09'
 /* UserCard() 함수 생성 하기 */
 /* UserCard() 컴포넌트를 App()컴포넌트의 자식으로 사용할 예정 */
 /* 컴포넌트와 컴포넌트 사이의 데이터 이동이 가능하다. */
@@ -159,7 +166,7 @@ function App() {
       <Alert type='info' msg='정보'/>
       <Alert type='warring' msg='경고'/> */}
       
-      <PizzaApp />
+      <Effect09 />
       
 
     </>
