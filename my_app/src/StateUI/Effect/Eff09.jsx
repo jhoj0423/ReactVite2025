@@ -8,17 +8,14 @@ export default function Effect09(){
         .then(res=>res.json())
         .then(data=>setUser(data))
         
-        let userCopy =[...user]
-        userCopy.slice(0,5)
-        setUser(userCopy)
+        
     },[]) // 
-    
     return(
         <>
             <div>
                 <ul>
-                    {user.map((user)=>(
-                        <li key={user.id}>{user.name}</li>
+                    {user.slice(0,5).map((user)=>(
+                        <li key={user.id}>{user.title}</li>
                     ))}
                 </ul>
             </div>

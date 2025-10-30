@@ -79,6 +79,17 @@ import Effect05 from './StateUI/Effect/Eff05'
 import Effect06 from './StateUI/Effect/Eff06'
 import Effect08 from './StateUI/Effect/Eff08'
 import Effect09 from './StateUI/Effect/Eff09'
+import Ex01 from './StateUI/Effect/Ex01'
+import Ex02 from './StateUI/Effect/Ex02'
+import Ex03 from './StateUI/Effect/Ex03'
+import Ex04_2 from './StateUI/Effect/Ex04'
+import Ex05_2 from './StateUI/Effect/Ex05'
+import Ex06_2 from './StateUI/Effect/Ex06'
+import Ex07_2 from './StateUI/Effect/Ex07'
+import Ex08_2 from './StateUI/Effect/Ex08'
+import Ex09_2 from './StateUI/Effect/Ex09'
+import Ex10_2 from './StateUI/Effect/Ex10'
+import Ex11 from './StateUI/Effect/Ex11'
 /* UserCard() 함수 생성 하기 */
 /* UserCard() 컴포넌트를 App()컴포넌트의 자식으로 사용할 예정 */
 /* 컴포넌트와 컴포넌트 사이의 데이터 이동이 가능하다. */
@@ -166,7 +177,7 @@ function App() {
       <Alert type='info' msg='정보'/>
       <Alert type='warring' msg='경고'/> */}
       
-      <Effect09 />
+      <Ex11 />
       
 
     </>
