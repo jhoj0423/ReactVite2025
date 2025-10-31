@@ -90,6 +90,14 @@ import Ex08_2 from './StateUI/Effect/Ex08'
 import Ex09_2 from './StateUI/Effect/Ex09'
 import Ex10_2 from './StateUI/Effect/Ex10'
 import Ex11 from './StateUI/Effect/Ex11'
+import EXfecth01 from './JSON/fecth'
+import ExJ01 from './JSON/ExJ01'
+import ExJ02 from './JSON/ExJ02'
+import ExJ03 from './JSON/ExJ03'
+import ExJ04 from './JSON/ExJ04'
+import ExJ05 from './JSON/ExJ05'
+import ExJ06App from './JSON/Exj06/ProductApp'
+import ExJ07 from './JSON/ExJ07'
 /* UserCard() 함수 생성 하기 */
 /* UserCard() 컴포넌트를 App()컴포넌트의 자식으로 사용할 예정 */
 /* 컴포넌트와 컴포넌트 사이의 데이터 이동이 가능하다. */
@@ -177,7 +185,7 @@ function App() {
       <Alert type='info' msg='정보'/>
       <Alert type='warring' msg='경고'/> */}
       
-      <Ex11 />
+      <ExJ07 />
       
 
     </>
