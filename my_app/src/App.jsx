@@ -102,6 +102,27 @@ import ExJ07 from './JSON/ExJ07'
 /* UserCard() 컴포넌트를 App()컴포넌트의 자식으로 사용할 예정 */
 /* 컴포넌트와 컴포넌트 사이의 데이터 이동이 가능하다. */
 /* 부모에서 -> 자식만 매개변수 보낼 수 있다. */
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Home from './Pages/Home'
+import About from './Pages/About'
+import ProdApp from './Pages/ProdApp'
+import ProDetail from './Pages/proDetail'
+import FakeStore from './Pages/Fake/FakeStore'
+import FakeStoreDetail from './Pages/Fake/FakeStoreDetail'
+import userProduct from './Pages/Fake/Data'
+
+import RecipData from './Pages/Recipes/RecipData'
+import RecipDetail from './Pages/Recipes/Recipedetail'
+import RecipList from './Pages/Recipes/RecipList'
+
+
+
+
+
+
+
+
+
 
 function UserCard(props)/* ({name,age}) 중괄호 안에 그럼 props 안써도 됨 */ {
   return (
@@ -117,17 +138,18 @@ function UserCard(props)/* ({name,age}) 중괄호 안에 그럼 props 안써도 
 
 function App() {
 /* 리액트는 반드시 return() 안에서 실행할 HTML 문서를 작성한다. */
-  const name = '홍길동';
+  /* const name = '홍길동';
   const isLoggin = true;
-  /* true, false 는 논리값이지 문자가 아님 */
+  //true, false 는 논리값이지 문자가 아님
   const furits =['사과','바나나','복숭아']
   const user = {name:'짱구',age:'5',email:'buriburi@naver.com'}
   const chkBtn = () => {
     console.log('버튼 클릭')
   }
   const products = [{id:1,name:"노트북",price:1200000},{id:2,name:"마우스",price:30000},{id:3,name:"키보드",price:80000}]
-
-  
+ */
+  /* const data = userProduct(); */
+  const Menu = RecipData()
   return (
     /* <></>는 프레그먼트로 리액트는 HTML 작성시 */
     /* 반드시 부모태그가 하나만 존재해야 하므로 */
@@ -185,11 +207,17 @@ function App() {
       <Alert type='info' msg='정보'/>
       <Alert type='warring' msg='경고'/> */}
       
-      <ExJ07 />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<RecipList Menu={Menu}/>}/>
+          <Route path='/detail/:id' element={<RecipDetail Menu={Menu}/>}/>
+        </Routes>
+      </BrowserRouter>
       
 
     </>
   )
 }
-/* export는 App컴포넌ㅌ르르 밖으로 내보낸다 */
+//커스텀 훅이든 훅이든 jsx안으로 가지고 들어올수 없다.
+/* export는 App컴포넌트를 밖으로 내보낸다 */
 export default App
