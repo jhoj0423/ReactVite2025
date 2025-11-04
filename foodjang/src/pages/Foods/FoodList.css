@@ -1,0 +1,100 @@
+a{text-decoration: none;
+color: #fff;}
+.Section{
+    margin: 0 auto;
+    width: 1280px;
+    color: #ddd;
+    margin-top: 130px;
+}
+.Section .SectionTop{
+    background-color: #fff;
+    text-align: right;
+}
+.Section .SectionTop button{
+    width: 80px;
+    height: 30px;
+    box-sizing: border-box;
+    margin: 5px 5px;
+    background-color: transparent;
+    border: none;
+    border-left: 3px solid #666;
+    border-right: 3px solid #666;
+    cursor: pointer;
+    
+}
+.Section .SectionTop button:hover{
+    color: yellowgreen;
+    font-weight: 600;
+    border: #333;
+    background-color: #333;
+    border-radius: 10px;
+}
+.Section .SectionBottom{
+    width: 100%;
+    background-color: #bbb;
+    margin: 0 auto;
+}
+.Section .SectionBottom ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
+}
+.Section .SectionBottom ul li{
+    background-color: #333;
+    color: #fff;
+    width: 210px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.Section .SectionBottom ul li span{
+    display: inline-block;
+    width: 190px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.Section .SectionBottom ul li span img{
+    width: 100%;
+    height: 100%;
+}
+
+.Section .MenuInfo{
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    width: 1080px;
+    margin: 0 auto;
+    
+}
+.Section .MenuInfo >h4{
+    color: yellowgreen;
+}
+.Section .MenuInfo >strong{
+    color: yellowgreen;
+}
+.Section .MenuInfo >ol{
+    text-align: left;
+    margin-left: 300px;
+    
+}
+.Section .MenuInfo:hover .info{
+    opacity: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+.Section .MenuInfo .info{
+    position: absolute;
+    top: 103px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    width: 700px;
+    height: 700px;
+}

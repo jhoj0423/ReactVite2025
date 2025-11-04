@@ -1,0 +1,84 @@
+.sectionHome{
+    margin: 0;
+    margin-top: 120px;
+}
+.sectionHome .homeMain{
+    margin: 0;
+    padding: 0;
+    height: 600px;
+}
+.sectionHome .homeMain img{
+    width: 100%;
+    height: 100%;
+}
+.sectionHome .firstContent{
+    width: 1450px;
+    height: 600px;
+    background-color: #fff;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+.sectionHome .firstContent >h2{
+    display: inline-block;
+    margin-top: 50px;
+    border-bottom: 2px solid #333;
+}
+.sectionHome .firstContent>button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    background-color: #333;
+    color: yellowgreen;
+    font-weight: bold;
+    line-height: 40px;
+}
+.sectionHome .firstContent .backBtn{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+.sectionHome .firstContent .nextBtn{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.sectionHome .firstContent .slideContent{
+    width: 2800px;
+    height: 600px;
+    display: flex;
+    float: left;
+    gap: 100px;
+    padding: 50px 100px;
+    transition: 0.3s;
+}
+.sectionHome .firstContent .slideContent> div{
+    width: 350px;
+    height: 350px;
+    border-radius: 10px;
+    border: 3px solid #666;
+    padding: 10px;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+.sectionHome .firstContent .slideContent> div >span{
+    display: inline-block;
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+    
+}
+.sectionHome .firstContent .slideContent> div >span img{
+    width: 100%;
+    height: 100%;
+
+}
+.sectionHome .firstContent .slideContent> div >h3{
+    color: yellowgreen;
+}

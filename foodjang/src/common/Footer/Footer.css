@@ -1,0 +1,52 @@
+.footer{
+    background-color: #333;
+    color: #fff
+}
+.footer .footerAria{
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+}
+.footer .footerAria> h2{
+    margin: 0 40px 0 0;
+    padding: 20px 0;
+
+}
+
+.footer .footerAria .footerMenu > ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+}
+.footer .footerAria .footerMenu > ul >li{
+    cursor: pointer;
+}
+.footer .footerAria .footerMenu > ul >li:hover{
+    font-weight: 600;
+}
+
+.footer .footerAria .footerMenu .footerInfo{
+    display: flex;
+    text-align: left;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+.footer .footerAria .footerMenu .footerInfo .call{
+    color: #bbb;
+}
+.footer .footerAria .footerMenu .footerInfo .call >strong{
+    font-size: 25px;
+}
+.footer .footerAria .footerMenu .footerInfo .call >p{
+    margin: 0;
+}
+.footer .footerAria .footerMenu .footerInfo .call >h3{
+    font-size: 30px;
+    margin: 0 0 10px 0;
+}
+.footer .footerAria .footerMenu .footerInfo .info p{
+    margin: 0;
+}

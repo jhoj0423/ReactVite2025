@@ -1,0 +1,57 @@
+.sectionNew{
+    margin-top: 150px;
+    background-color: #ccc;
+    width: 1280px;
+    margin: 0 auto;
+    
+}
+.sectionNew > ul{
+    margin: 0;
+    margin-top: 150px;
+    list-style: none;
+    padding: 0;
+    padding-top: 20px;
+}
+.sectionNew > ul > li{
+    position: relative;
+    height: 800px;
+    width: 750px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+.sectionNew > ul > li >h4{
+    margin: 0 0 50px 0;
+}
+.sectionNew > ul > li:hover .NewInfo{
+    opacity: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-weight: 600;
+}
+.sectionNew > ul > li span img{
+    height: 750px;
+}
+.sectionNew > ul > li .NewInfo{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    width: 750px;
+    height: 750px;
+}
+.sectionNew > ul > li .NewInfo h2{
+    margin-top: 60px;
+    color: yellowgreen;
+}
+.sectionNew > ul > li .NewInfo strong{
+    color: yellowgreen;
+}
+.sectionNew > ul > li .NewInfo > ol{
+    width: 400px;
+    margin: 0 auto;
+}
+.sectionNew > ul > li .NewInfo > ol >li{
+    margin-bottom: 20px;
+    text-align: left;
+}

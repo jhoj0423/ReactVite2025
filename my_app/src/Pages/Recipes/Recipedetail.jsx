@@ -28,7 +28,7 @@ export default function RecipDetail({Menu}){
                             <li key={index}>{item}</li>
                         ))}
                     </ul>
-                    <button type="button">❤좋아요</button>
+                    
                 </div>) : null
             }
             <Link to='/'><button type="button">이전 페이지로</button></Link>

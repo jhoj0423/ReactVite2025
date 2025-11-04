@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from "react";
-import { useParams } from "react-router-dom";
+import { data, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import '../Recipes/Recip.css'
 
@@ -13,20 +13,35 @@ export default function RecipList({Menu}){
     console.log(Menu)
     console.log('여기 까지 확인용')
 
-
+    //좋아요 출력할 방향
+    // like = {1:0,2:0,.....}
+    // id 음식명 좋아요
+    // 1 음식명 0
+    // 2 ~~ 0
+    // 3 ~~ 0
+    const defaultLike={} // undefined 될 가능성 높음
+    //json 자체가 오브젝트 이기때문에 아래와 같이 초기화 할 수 없다
+    //이유는 하나 항목만 좋아요가 0이 되기때문에
+    const [likes,setLikes] = useState(defaultLike)
+    //오브젝트에 0 초기화 하는 초기값 변수
     
+    if(Menu.length>0){
+        for(let i=0;i<Menu.length;i++){
+            const recip = Menu[i]
+            //defaultLikes[1] = 0 
+            defaultLike[recip.id]=0
+        }
+    }
     
     const AllTabBtn =()=>{
         setChking(false)
         setFood(Menu)
-        console.log(food)
     }
     const ratingTabBtn =()=>{
         setChking(false)
         let MenuCopy = [...Menu]
         MenuCopy.sort((a,b) => b.rating - a.rating);
         setFood(MenuCopy)
-        console.log(food)
     }
     const TabBtn=(num)=>{
         setChking(false)
@@ -101,8 +116,10 @@ export default function RecipList({Menu}){
             setFood(tagMenu)
         }
     }
-    const GoodBtn = () => {
-        setChking(false)
+    const likeHandeler = (id) => {
+        const LikesCopy = {...likes}
+        LikesCopy[id] = (LikesCopy[id] !== undefined ? LikesCopy[id]+1:1)
+        setLikes(LikesCopy)
     }
 
     if(food !== null && food !== undefined){
@@ -134,15 +151,16 @@ export default function RecipList({Menu}){
                         </div>
                         <ul className="RecipList">
                             {Menu.map((item)=>(
-                                <Link to={`/detail/${item.id}`} key={item.id}>
-                                    <li >
-                                        <span><img src={item.image} alt="" /></span>
-                                        <strong>{item.name.slice(0,20)}</strong>
-                                        <p>요리 유형:{item.tags[0]}</p>
-                                        <p>평점 :{item.rating}</p>
-                                        <button type="button" onClick={GoodBtn}>❤좋아요</button>
+                                
+                                    <li key={item.id}>
+                                        <Link to={`/detail/${item.id}`} >
+                                            <span><img src={item.image} alt="" /></span>
+                                            <strong>{item.name.slice(0,20)}</strong>
+                                            <p>요리 유형:{item.tags[0]}</p>
+                                            <p>평점 :{item.rating}</p>
+                                        </Link>
+                                        <button type="button" onClick={()=>likeHandeler(item.id)}> 💚 좋아요{likes[item.id]}</button>
                                     </li>
-                                </Link>
                             ))}
                         </ul>
                     </div>:
@@ -171,15 +189,15 @@ export default function RecipList({Menu}){
                         </div>
                         <ul className="RecipList">
                             {food.map((item)=>(
-                                <Link to={`/detail/${item.id}`} key={item.id}>
-                                    <li >
+                                <li key={item.id}>
+                                    <Link to={`/detail/${item.id}`} >
                                         <span><img src={item.image} alt="" /></span>
-                                        <strong>{item.name.slice(0,15)}</strong>
+                                        <strong>{item.name.slice(0,20)}</strong>
                                         <p>요리 유형:{item.tags[0]}</p>
                                         <p>평점 :{item.rating}</p>
-                                        <button type="button">❤좋아요</button>
-                                    </li>
-                                </Link>
+                                    </Link>
+                                    <button type="button" onClick={()=>likeHandeler(item.id)}> 💚 좋아요{likes[item.id]}</button>
+                                </li>
                             ))}
                         </ul>
                     </div>

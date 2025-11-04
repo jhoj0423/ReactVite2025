@@ -1,0 +1,39 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Header from './common/Header/Header'
+import Footer from './common/Footer/Footer'
+import HomePage from './pages/Home/HomePage'
+import FoodList from './pages/Foods/FoodList'
+import Data from './api/foodData'
+import NewList from './pages/New/NewList'
+import BestList from './pages/Best/BestList'
+import FoodDetail from './pages/Foods/FoodDetail'
+
+
+function App() {
+  
+  const data = Data()
+  console.log(data.data)
+  return (
+    <>
+      <BrowserRouter>
+        <Header />
+
+        <Routes>
+          <Route  path='/' element={<HomePage data={data}/>}/>
+          <Route  path='/FoodList' element={<FoodList data={data}/>}/>
+          <Route  path='/BestList' element={<BestList data={data}/>}/>
+          <Route  path='/NewList' element={<NewList data={data}/>}/>
+          <Route  path='/FoodDetail/:id' element={<FoodDetail data={data}/>}/>
+        </Routes>
+
+        <Footer />
+      </BrowserRouter>
+    </>
+  )
+}
+
+export default App
