@@ -1,0 +1,47 @@
+.LoginContainer{
+    width: 1280px;
+    height: 800px;
+    margin: 150px auto 0;
+    padding: 0;
+    padding-top: 200px;
+    
+}
+.LoginContainer .loginBox{
+    background-color: #fff;
+    width: 400px;
+    height: 500px;
+    margin: 0px auto;
+    text-align: left;
+    padding: 20px 40px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    
+}
+.LoginContainer .loginBox .login{
+    padding: 20px;
+    border: 1px solid #333;
+    display: flex;
+    flex-wrap: wrap;
+}
+.LoginContainer .loginBox .login > button{
+    width: 98px;
+    height: 98px;
+    background-color: #333;
+    color: yellowgreen;
+    border-radius: 10px;
+}
+.LoginContainer .loginBox .login h4{
+    width: 100%;
+}
+.LoginContainer .loginBox .login .loginInput{
+    width: 250px;
+}
+.LoginContainer .loginBox .login .loginInput > input{
+    width: 200px;
+    height: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.LoginContainer .loginBox .login p{
+    width: 100%;
+}
