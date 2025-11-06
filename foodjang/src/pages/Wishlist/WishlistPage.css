@@ -1,0 +1,79 @@
+section{
+    background-color: #ccc;
+    width: 1280px;
+    min-height: 600px;
+    margin: 138px auto 0;
+    padding-top: 30px;
+}
+section h2{
+}
+section ul{
+    list-style: none;
+}
+section ul li{
+    width: 600px;
+    background-color: #fff;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: left;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+    display: flex;
+
+}
+section ul li img{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+    margin-right: 30px;
+}
+section ul li div button{
+    border: none;
+    background-color: #333;
+    color: yellowgreen;
+    border-radius: 5px;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
+section .WishModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff89;
+}
+section .WishModal .modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 3px solid #333;
+}
+section .WishModal h2{
+    background-color: #333;
+    color: yellowgreen;
+    margin: 0;
+    padding: 10px 0 ;
+}
+section .WishModal p{
+    padding: 20px;
+}
+section .WishModal .modal div{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+section .WishModal .modal div button{
+    padding: 10px 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+}

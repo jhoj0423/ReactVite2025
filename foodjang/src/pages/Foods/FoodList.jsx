@@ -2,10 +2,13 @@ import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import "../Foods/FoodList.css"
+import { useContext } from "react";
+import { FoodAuth } from "../../common/LoginForm/FoodAuth";
 
 export default function FoodList({data}){
     const [Menu,setMenu] = useState(true)
     const [MenuData,setMenuData] = useState(null)
+    const  {userChk,login,logout,wishlist,addToWishlist,removeFromWishlist} = useContext(FoodAuth)
     console.log(data)
 
     const AllBtn =()=>{
@@ -43,6 +46,14 @@ export default function FoodList({data}){
                                         <h4>{item.name}</h4>
                                         <p>평점 : {item.rating}</p>
                                     </Link>
+                                    {userChk === null?
+                                    ''
+                                    :
+                                    wishlist.find((wishlist)=>wishlist.id===item.id) === undefined && userChk !== null?
+                                    <button type="button" onClick={()=>{addToWishlist(item)}}>🛒찜하기</button>
+                                    :
+                                    <button type="button" onClick={()=>{removeFromWishlist(item.id)}}>💖찜취소</button>
+                                    }
                                 </li>
                             )):MenuData.map((item)=>(
                                 <li key={item.id}>
@@ -51,6 +62,14 @@ export default function FoodList({data}){
                                         <h4>{item.name}</h4>
                                         <p>평점 : {item.rating}</p>
                                     </Link>
+                                    {userChk === null?
+                                    ''
+                                    :
+                                    wishlist.find((wishlist)=>wishlist.id===item.id) === undefined && userChk !== null?
+                                    <button type="button" onClick={()=>{addToWishlist(item)}}>🛒찜하기</button>
+                                    :
+                                    <button type="button" onClick={()=>{removeFromWishlist(item.id)}}>💖찜취소</button>
+                                    }
                                 </li>
                             ))}
                         </ul>

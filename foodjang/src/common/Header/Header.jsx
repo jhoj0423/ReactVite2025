@@ -6,20 +6,25 @@ import { useContext } from "react";
 import { FoodAuth } from "../LoginForm/FoodAuth";
 
 export default function Header(){
-    const {userChk,logout} = useContext(FoodAuth)
+    const {userChk,logout,wishlist} = useContext(FoodAuth)
+    
     return(
         <>
             <div className="Header">
                 <div className="headerContent">
-                    <span>
+                    <span className="topMenu">
                         {userChk !== null?
                             <div>
-                                <button type="button" onClick={logout}>로그아웃</button>
                                 <span>안녕하세요 {userChk}님!</span>
+                                <span><Link to='/Wishlist'>🛒/{wishlist.length}</Link></span>
+                                <button type="button" onClick={logout}>로그아웃</button>
+                                
                             </div>
                             
                         :
-                            <Link to='/Login'>로그인</Link>
+                            <div>
+                                <button type="button"><Link to='/Login'>로그인</Link></button>
+                            </div>
                         }
                     </span>
                     <h2 className="Logo">헤더로고</h2>

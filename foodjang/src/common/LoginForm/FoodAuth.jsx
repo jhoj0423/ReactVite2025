@@ -13,6 +13,7 @@ export default function FoodAuthProvider({children}){
     ])
     const [userChk,setUserChk] = useState(null)
     
+    
 
     const login=(userInfo)=>{
            
@@ -38,8 +39,23 @@ export default function FoodAuthProvider({children}){
         setUserChk(null)
     }
 
+    /* 찜화면 */
+    const [wishlist,setWishlist] = useState([])
+
+    const addToWishlist=(item)=>{
+        let wishlistCopy = [...wishlist]
+        wishlistCopy.push(item)
+        setWishlist(wishlistCopy)
+    }
+    const removeFromWishlist=(id)=>{
+        setWishlist(wishlist.filter((wishlist)=>wishlist.id!==id))
+    }
+    const isInWishlist=(id)=>{
+
+    }
+
     return(
-        <FoodAuth.Provider value={{userChk,login,logout}}>
+        <FoodAuth.Provider value={{userChk,login,logout,wishlist,addToWishlist,removeFromWishlist,setWishlist}}>
             {children}
         </FoodAuth.Provider>
     )
