@@ -1,0 +1,64 @@
+#joinWrap{
+    background-color: #ccc;
+    width: 1280px;
+    margin: 130px auto 0;
+    padding-top: 20px;
+}
+#joinWrap >h1{
+    background-color: #333;
+    padding: 10px 0;
+    color: yellowgreen;
+}
+
+#joinWrap form > ul{
+    list-style: none;
+    padding: 0;
+}
+#joinWrap form > ul >li{
+    margin: 0 auto;
+    width: 500px;
+    height: 50px;
+    margin-bottom: 20px;
+    position: relative;
+}
+#joinWrap form > ul >li > button{
+    position: absolute;
+    bottom: 40%;
+    right: 50px;
+    transform: translateY(50%);
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    background-color: #fff;
+}   
+#joinWrap form > ul >li >span{
+    position: absolute;
+    bottom: 35%;
+    right: 120px;
+    transform: translateY(50%);
+    font-size: 10px;
+}
+#joinWrap form > ul >li:nth-child(7){
+    margin: 0 auto;
+    width: 800px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+#joinWrap form > ul >li >input{
+    width: 400px;
+    height: 40px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 3px solid #fff;
+    font-size: 18px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+}
+#joinWrap form > button{
+    background-color: #333;
+    color: yellowgreen;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    margin-bottom: 60px;
+}

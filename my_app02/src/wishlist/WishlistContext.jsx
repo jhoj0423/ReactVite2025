@@ -1,13 +1,37 @@
 import { createContext } from "react";
 import { useState } from "react";
+import { useEffect } from "react";
 
 //생성자 함수
 export const WishListContext = createContext(null)
 
 //Provider=>공급자
 export default function WishListProvider({children}){
-    const [wishlist,setWishlist] = useState([])
+    const [wishlist,setWishlist] = useState(()=>{
+        const saved = localStorage.getItem('wishlist')
+        //저장된 value가 있으면 복원, 없으면 빈 배열
+        return saved ? JSON.parse(saved) : []
+    })
+    // 1. LocalStorage 에서 불러오기
+    // useEffect 이용해서 작성
+    /* useEffect(()=>{
+        const saved = localStorage.getItem('wishlist')
+        if(saved){
+            setWishlist(JSON.parse(saved)) // 상태를 생신
+            //useEffect에서는 return 방식은 cleanUp함수 작성 방식이기 때문에 X
+        }
+    },[]) */
+
+    // 2. wishlist 가 바뀔때 마다 Localstorage에 저장
+    useEffect(()=>{
+        localStorage.setItem('wishlist',JSON.stringify(wishlist))
+    },[wishlist])
     
+    const remove =()=>{
+        setWishlist([])
+        localStorage.removeItem('wishlist')
+    }
+
     const addToWishlist=(item)=>{//찜추가 함수
         let wishListCopy = [...wishlist]
 
@@ -37,7 +61,7 @@ export default function WishListProvider({children}){
     // }
     
     return(
-        <WishListContext.Provider value={{wishlist,setWishlist,addToWishlist,removeFromWishlist}}>
+        <WishListContext.Provider value={{wishlist,setWishlist,addToWishlist,removeFromWishlist,remove}}>
             {children}
         </WishListContext.Provider>
     )

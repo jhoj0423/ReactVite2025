@@ -9,16 +9,30 @@ import AuthProvider from './Context02/AuthContext'
 import Header02 from './Context02/components02/Header'
 import WishListProvider from './wishlist/WishlistContext'
 import ProductList from './wishlist/productList'
+import AuthProvider05 from './LoginExample/context/AuthContext'
+import LoginPage05 from './LoginExample/pages/LoginPage'
+import HomePage05 from './LoginExample/pages/HomePage'
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Join from './Addr/join'
 
 function App() {
   
 
   return (
     <>
-      <WishListProvider>
+      {/* <WishListProvider>
         < ProductList/>
-      </WishListProvider>
+      </WishListProvider> */}
+      <BrowserRouter>
+        <AuthProvider05>
+          <Routes>
+            <Route path='/' element={<LoginPage05/>}/>
+            <Route path='/Home' element={<HomePage05/>}/>
+          </Routes>
+        </AuthProvider05>
+      </BrowserRouter>
       
+      <Join/>
     </>
   )
 }

@@ -16,13 +16,15 @@ export default function Header(){
                         {userChk !== null?
                             <div>
                                 <span>안녕하세요 {userChk}님!</span>
-                                <span><Link to='/Wishlist'>🛒/{wishlist.length}</Link></span>
+                                <span><Link to='/Cart'>🛒장바구니</Link></span>
+                                <span><Link to='/Wishlist'>💖/{wishlist.length}</Link></span>
                                 <button type="button" onClick={logout}>로그아웃</button>
                                 
                             </div>
                             
                         :
                             <div>
+                                <button type="button"><Link to='/Join'>회원가입</Link></button>
                                 <button type="button"><Link to='/Login'>로그인</Link></button>
                             </div>
                         }

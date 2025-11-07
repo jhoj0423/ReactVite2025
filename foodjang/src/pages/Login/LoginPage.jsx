@@ -3,6 +3,7 @@ import { FoodAuth } from "../../common/LoginForm/FoodAuth";
 import { Link } from "react-router-dom";
 import "../Login/LoginPage.css"
 import { useContext } from "react";
+import {useNavigate} from "react-router-dom"
 
 export default function LoginPage(){
 
@@ -10,6 +11,8 @@ export default function LoginPage(){
 
     const [myId,setMyId] = useState('')
     const [myPass,setMyPass] = useState('')
+
+    
 
     const idInput=(e)=>{
         setMyId(e.target.value)
@@ -30,7 +33,8 @@ export default function LoginPage(){
                             <input type="text" placeholder="비밀번호" onChange={passInput} value={myPass} />
                         </div>
                         <button type="button" onClick={()=>login({userId:myId,pass:myPass})}>로그인</button>
-                        <p>아이디 저장</p>
+                        <input type="checkbox" name="rememberId" id="rememberId" />
+                        <label htmlFor="rememberId">아이디 저장</label>
                     </div>
                 </div>
             </div>

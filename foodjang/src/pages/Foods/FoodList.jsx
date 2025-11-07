@@ -8,7 +8,7 @@ import { FoodAuth } from "../../common/LoginForm/FoodAuth";
 export default function FoodList({data}){
     const [Menu,setMenu] = useState(true)
     const [MenuData,setMenuData] = useState(null)
-    const  {userChk,login,logout,wishlist,addToWishlist,removeFromWishlist} = useContext(FoodAuth)
+    const  {userChk,login,logout,wishlist,addToWishlist,removeFromWishlist,addToCartlist,cartlist} = useContext(FoodAuth)
     console.log(data)
 
     const AllBtn =()=>{
@@ -50,10 +50,11 @@ export default function FoodList({data}){
                                     ''
                                     :
                                     wishlist.find((wishlist)=>wishlist.id===item.id) === undefined && userChk !== null?
-                                    <button type="button" onClick={()=>{addToWishlist(item)}}>🛒찜하기</button>
+                                    <button type="button" onClick={()=>{addToWishlist(item)}}>🤍찜하기</button>
                                     :
                                     <button type="button" onClick={()=>{removeFromWishlist(item.id)}}>💖찜취소</button>
                                     }
+                                    {userChk && <button type="button" className="CartBtn" onClick={()=>{addToCartlist(item)}}>🛒장바구니 담기</button>}
                                 </li>
                             )):MenuData.map((item)=>(
                                 <li key={item.id}>
@@ -66,10 +67,11 @@ export default function FoodList({data}){
                                     ''
                                     :
                                     wishlist.find((wishlist)=>wishlist.id===item.id) === undefined && userChk !== null?
-                                    <button type="button" onClick={()=>{addToWishlist(item)}}>🛒찜하기</button>
+                                    <button type="button" onClick={()=>{addToWishlist(item)}}>🤍찜하기</button>
                                     :
                                     <button type="button" onClick={()=>{removeFromWishlist(item.id)}}>💖찜취소</button>
                                     }
+                                    {userChk  && <button type="button" className="CartBtn" onClick={()=>{addToCartlist(item)}}>🛒장바구니 담기</button>}
                                 </li>
                             ))}
                         </ul>
