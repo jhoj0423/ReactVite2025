@@ -1,0 +1,24 @@
+header{
+    background-color: #aaa;
+    display: flex;
+    justify-content: space-between;
+}
+header ul{
+    list-style: none;
+    display: flex;
+    width: 300px;
+    text-align: right;
+}
+header ul li{
+    list-style: none;
+    display: flex;
+    width: 80px;
+    text-align: right;
+}
+
+header div h2{
+    text-align: left;
+    display: inline-block;
+    width: 200px;
+    margin-left: 20px;
+}

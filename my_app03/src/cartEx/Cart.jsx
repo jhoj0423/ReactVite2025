@@ -3,12 +3,13 @@ import { addItem,removeItem,resetItem } from "./cartSlice";
 
 export default function Cart(){
     const sampleProducts =[
-        {id:1,name:'포켓몬',price:1000},
-        {id:2,name:'디지몬',price:800},
-        {id:3,name:'믹스몬',price:200},
+        {id:1,name:'사과',price:1000},
+        {id:2,name:'수박',price:800},
+        {id:3,name:'키위',price:200},
     ]
     const dispatch = useDispatch()
-    const cart = useSelector((state)=>state.cart.value)
+    const cart = useSelector((state)=>state.cart.list)
+    console.log(cart)
     return(
         <>
             <h1>장바구니</h1>
@@ -21,11 +22,11 @@ export default function Cart(){
             </ul>
             <h2>장바구니</h2>
             <ul>
-                {cart.length>0?cart.map((item)=>(
-                    <li key={item.id}>
-                        {item.name} - {item.price}원 <button type="button" onClick={()=>{dispatch(removeItem(item))}}>삭제</button>
+                {cart.map((item,index)=>(
+                    <li key={index}>
+                        {item.name} - {item.price}원 <button type="button" onClick={()=>{dispatch(removeItem(index))}}>삭제</button>
                     </li>
-                )):null}
+                ))}
             </ul>
             <button type="button" onClick={()=>{dispatch(resetItem())}}>장바구니 비우기</button>
         </>

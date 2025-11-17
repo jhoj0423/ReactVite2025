@@ -1,0 +1,35 @@
+section{}
+section ul{
+    list-style: none;
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+section ul li{
+    width: 150px;
+    height: 300px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    box-sizing: border-box;
+    
+}
+section ul li:hover{
+    border: 3px solid salmon;
+    padding: 3px;
+}
+section ul li img{
+    width: 100%;
+    height: 80px;
+}
+section ul li h4{}
+section ul li p{}
+section ul li button{
+    padding: 3px 6px;
+    border: 1px solid #333;
+    margin-right: 3px;
+}
+section ul li button:hover{
+    border: 1px solid skyblue;
+}
