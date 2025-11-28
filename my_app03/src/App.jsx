@@ -12,13 +12,15 @@ import CartPage from './pages/CartPage'
 import Section from './pages/Section'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import ProductData from './components/productData'
+import CookieTest from './cookie/cookieTest'
+import LoginCookie from './cookie/LoginCookie'
 
 function App() {
   
 
   return (
     <>
-      {<ProductData />}
+      {/* {<ProductData />}
       <BrowserRouter>
         <Header />
           <Routes>
@@ -26,7 +28,8 @@ function App() {
             <Route path='/CartPage' element={<CartPage/>}/>
           </Routes>
         <Footer />
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <LoginCookie/>
     </>
   )
 }
