@@ -6,6 +6,7 @@ export default function LoginCookie(){
     const [userId,setUserId] = useState(cookie.get('userId') || '')
     const [userPw,setUserPw] = useState('')
     const saveId = cookie.get('userId')
+
     const [idChk,setIdChk] = useState(
         saveId?true:false
     )
@@ -36,6 +37,24 @@ export default function LoginCookie(){
             
     }
 
+    //모달 여닫기
+    const [open,setOpen] = useState(
+        cookie.get('oneWeek') === '닫기' ? false:true
+    )
+
+    const modalSave =()=>{
+        const oneWeek = new Date(Date.now()+1000*10) // 7주일 할꺼면 1000*60*60*24*7
+        cookie.set('oneWeek','닫기',{expires:oneWeek,path:'/'})
+        setOpen(false)
+        alert('아마도')
+    }
+    const aa =()=>{
+        alert(open)
+    }
+
+
+    
+
     return(
         <>
             <h2>NAVER</h2>
@@ -56,8 +75,13 @@ export default function LoginCookie(){
                     </ul>
                     <button type="submit" className='btn'>로그인</button>
                 </form>
-                
             </div>
+            {open && <div className="weekmodal">
+                <h2>1주일간 숨기는 모달입니다</h2>
+                <p>모달의 내용입니다</p>
+                <button type="button" onClick={aa}>확인용</button>
+                <button type="button" onClick={modalSave}>1주일간 숨기기</button>
+            </div>}
         </>
     )
 }
